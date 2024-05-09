@@ -10,11 +10,13 @@ Output: “ap”
 
 
 def getLongestPrefix(arr)
-
+    # obtain the longest string ( in terms of length )
    longestString = arr.max_by(&:length)
+   # obtain the smallest string ( in terms of length)
    shortestString = arr.min_by(&:length)
    index=0
    ans=""
+#    checking each index from 0th position and stroing at ans variable
    until longestString[index] != shortestString[index]
     ans+=shortestString[index]
     index+=1

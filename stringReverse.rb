@@ -11,6 +11,7 @@ Please do not use any inbuilt functions provided by Ruby here
 
 
 def reverseByRecursion(str,index)
+    # base case
    if str.length-1 == index
         return str[index]
    end

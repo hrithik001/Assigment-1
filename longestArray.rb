@@ -9,7 +9,7 @@ Explanation: The longest sub-array with elements summing up-to 0 is [-2, 2, -8, 
 
 def getLongestSubarrayLength(arr)
    max_size = 0
-   prefix_sum = 0;
+   sum = 0;
    hashmap={}
   
 
@@ -17,11 +17,14 @@ def getLongestSubarrayLength(arr)
     index = 0
     while index < arr.length do
     
-        prefix_sum += arr[index];
-        if !hashmap.has_key?(prefix_sum)
-            hashmap.store(prefix_sum,index)
-        end                   
-        curr_size = index - hashmap[prefix_sum]; 
+        sum += arr[index];
+        # adding if the sum along with index is not present in the hashmap 
+        if !hashmap.has_key?(sum)
+            hashmap.store(sum,index)
+        end    
+        # obtaining the length of subarray    
+        curr_size = index - hashmap[sum]; 
+        # storing the max size of sub array
         max_size = max_size > curr_size ? max_size : curr_size
         
         index+=1

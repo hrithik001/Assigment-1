@@ -10,6 +10,16 @@ Please use functions provided by Ruby Date,Time and DateTime classes here
 require 'date'
 
 def printAllFormat(date_time)
+    # a => short name of weekdays
+    # A => full name of weekdays
+    # d => date
+    # b => short name of month
+    # B => full name of month
+    # Y => year
+    # l => hour
+    # M => min
+    # p => Am/Pm
+    
     puts "Format 1 => #{date_time.strftime('%a, %d %b, %Y')}"
     puts "Format 2 => #{date_time.strftime('%d/%m/%Y')}"
     puts "Format 3 => #{date_time.strftime('%l:%M %p, %A %d %B, %Y')}"

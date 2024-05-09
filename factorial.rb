@@ -7,6 +7,7 @@ Explanation: 5! = 5*4*3*2*1 =120
 =end
 
 def factorial(num)
+    # base case
     if num==0
         return 1
     end

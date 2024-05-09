@@ -18,7 +18,7 @@ Explanation: Brackets have not been closed properly
 =end
 
 def CheckIfValidExpresssion(expression)
-   
+#    return if expression contians any alphabet character
     expression.each_char do |char|
        if char.match(/[A-Za-z]/)
          return "Invalid Expression"
@@ -33,7 +33,7 @@ def CheckIfValidExpresssion(expression)
             when '(', '{' , '['
                 stack.push(char)
             when ')', '}' , ']'
-       
+                # checking closing bracket if avilable othewise invalid
                 if stack.empty? || (char == ')' && stack.pop != '(') || (char == '}' && stack.pop != '{') || (char == ']' && stack.pop != '[')
                     return "Invalid Expression"
                 end

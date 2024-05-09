@@ -9,6 +9,7 @@ Explanation: Fibonacci Series: 0, 1, 1, 2, 3, 5 (3 is the 5th number)
 
 
 def nthFibonacci(num)
+    # base case
     if num <= 1
         return num
     end

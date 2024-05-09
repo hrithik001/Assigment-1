@@ -9,6 +9,7 @@ Explanation: Mean = (1+2+3+4+5) / 5 = 15/5 = 3
 
 
 def meanOfArray(arr)
+    # base case
     if arr.length == 0
         return 0
     end
